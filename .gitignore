@@ -1,0 +1,5 @@
+node_modules/
+client/dist/bundle.js
+db/credentials.js
+newrelic.js
+newrelic_agent.log

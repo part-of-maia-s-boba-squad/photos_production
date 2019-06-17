@@ -1,0 +1,376 @@
+/* ============================= PHOTO CONTAINER =============================== */
+
+#photo-container {
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  border: 2px black solid;
+  height: 288px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1fr 142px 2fr 288px 1fr 142px 2fr 288px 1fr 142px 2fr 288px 1fr 142px 2fr 288px 1fr 142px 2fr 288px);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "one three three four six six seven nine nine ten twelve twelve" "two three three five six six eight nine nine eleven twelve twelve";
+}
+
+/* ============================= INDIVIDUAL PHOTOS =============================== */
+
+#one { 
+  grid-area: one; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+  object-fit: cover;
+}
+
+#two { 
+  grid-area: two; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+  object-fit: cover;
+}
+
+#three { 
+  grid-area: three; 
+  border: 2px black solid;
+  height: 288px;
+  width: 288px;
+  object-fit: cover;
+}
+
+#four { 
+  grid-area: four; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+  object-fit: cover;
+}
+
+#five {
+  object-fit: cover; 
+  grid-area: five; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+}
+
+#six {
+  object-fit: cover; 
+  grid-area: six; 
+  border: 2px black solid;
+  height: 288px;
+  width: 288px;
+}
+
+#seven {
+  object-fit: cover; 
+  grid-area: seven; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+}
+
+#eight {
+  object-fit: cover; 
+  grid-area: eight; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+}
+
+#nine {
+  object-fit: cover; 
+  grid-area: nine; 
+  height: 288px;
+  width: 288px;
+  border: 2px black solid;
+}
+
+#ten {
+  object-fit: cover; 
+  grid-area: ten; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+}
+
+#eleven {
+  object-fit: cover; 
+  grid-area: eleven; 
+  border: 2px black solid;
+  height: 142px;
+  width: 142px;
+}
+
+#twelve {
+  object-fit: cover; 
+  grid-area: twelve; 
+  height: 288px;
+  width: 288px;
+  border: 2px black solid;
+}
+
+/* ============================= MODAL =============================== */
+
+/* ModalDiv */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1001;
+}
+
+.modal-content {  
+  display: block;
+  margin: 0px auto 0px auto;
+  width: 590px;  
+  height: 590px;
+  object-fit: cover;
+}
+
+.modal-content-holder {
+  display: block;
+  margin: 30px auto 0px auto;
+  width: 590px;  
+  height: 590px;
+}
+
+.modal-footer {
+  margin: 8px 0px;
+}
+
+.closeBtn {
+  font-family: icons;
+  display: inline;
+  font-style: normal;
+  font-weight: 200;
+  font-variant: normal;
+  color: #6f737b;
+  float: right;
+  padding: 25px;
+  font-size: 50px;
+}
+
+.circle-holder {
+  margin: 8px 6px 0px 0px;
+  float: left;
+}
+
+.text-holder {
+  float: left;
+  padding: 8px 0px 0px 0px;
+  /* margin: 8px 0px 0px 8px;  */
+}
+
+.text {
+  display: block;
+  padding: 4px 0px 0px 0px;
+  margin: 8px 0px 0px 0px;
+  color: white;
+  font-size: 16px;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-weight: 500;
+}
+
+.dinedOn {
+  display: block;
+  padding: 4px 0px 0px 0px;
+  color: white;
+  font-size: 16px;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-weight: 100;
+}
+
+.circle {
+  margin: auto;
+  width: 50px;
+  height: 50px; 
+  border-radius: 50%;
+  border: 1px solid black;
+  background: #56D7D9;
+  color: white;
+  font-family: arial;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.leftArrow {
+  color: #91949a;
+  font-size: 25px;
+  position: relative;
+  top: 50%;
+  font-family: icons;
+}
+
+.rightArrow {
+  color: #91949a;
+  font-size: 25px;
+  position: relative;
+  display: block;
+  margin-right: auto;
+  top: 50%;
+  font-family: icons;
+}
+
+.rightArrowDiv {
+  margin: 30px 0px 30px 0px;
+  width: 20px;
+}
+
+.flag-icon {
+  margin: 8px;
+  color: white;
+  font-family: BrandonText;
+  float: right;
+}
+
+.outerDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 660px;
+  height: 660px;
+}
+
+/* ==================== FLAG POP-UP ================== */
+
+.report {
+  position: absolute;
+  width: 25rem;
+  right: 0;
+  left: 0;
+  top: 200px;
+  margin: auto;
+  border-color: rgba(0,0,0,.0784314);
+  border-style: solid;
+  border-width: .67px;
+  border-radius: 3px;
+  background-color: white;
+  z-index: 1003;
+  padding-bottom: 16px;
+}
+
+.report-header {
+  font-size: 1.25rem;
+  padding-left: 16px;
+  display: block;
+  font-weight: bold;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.unrelated {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  width: 90%;
+  margin: 5px auto;
+  padding: .6rem 1.75rem;
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(97, 189, 219);
+}
+
+.inappropriate {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  width: 90%;
+  margin: 5px auto;
+  padding: .6rem 1.75rem;
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(97, 189, 219);
+}
+
+.dont-like {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  width: 90%;
+  margin: 5px auto;
+  padding: .6rem 1.75rem;
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(97, 189, 219);
+}
+
+.cancel {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  width: 90%;
+  margin: 5px auto;
+  padding: .6rem 1.75rem;
+  text-align: center;
+  border-radius: 3px;
+  background-color: white;
+  color: rgb(97, 189, 219);
+  border: 0;
+}
+
+/* ==================== RESPONSIVE RESIZING of MODAL ================== */
+
+@media only screen and (max-width: 64em) and (min-width: 40.0625em) {
+  .modal-content, .modal-content-holder {
+    width: 400px;
+    height: 400px;
+  }  
+  .outerDiv {
+    width: 470px;
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 40em) and (min-width: 25.0625em) {
+  .modal-content, .modal-content-holder {
+    width: 300px;
+    height: 300px;
+  }  
+  .outerDiv {
+    width: 370px;
+    height: 370px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .modal-content, .modal-content-holder {
+    width: 200px;
+    height: 200px;
+  }
+  .outerDiv {
+    width: 270px;
+    height: 270px;
+
+  }
+}
+
+/* ==================== RESPONSIVE RESIZING of GALLERY ================== */
+
+@media screen and (max-width: 767px) {
+  #photo-container {
+    grid-template-columns: repeat(1fr 71px 2fr 144px 1fr 71px 2fr 144px 1fr 71px 2fr 144px 1fr 71px 2fr 144px 1fr 71px 2fr 144px);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "one three three four six six seven nine nine ten twelve twelve" "two three three five six six eight nine nine eleven twelve twelve";
+    height: 144px;
+    display: grid;
+  }  
+  .size1 {
+    height: 71px;
+    width: 71px;
+  }
+  .size2 {
+    height: 144px;
+    width: 144px;
+  }
+}
