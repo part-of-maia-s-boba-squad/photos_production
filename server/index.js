@@ -38,6 +38,10 @@ const getPhotos = (req, res) => {
   });
 };
 
+app.get('/loaderio-ee36574dcbb5346fd7aa34a19742a716/', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, '../loaderio-ee36574dcbb5346fd7aa34a19742a716.txt'));
+});
+
 app.get('/API/restaurant/photo/:id', getCache);
 
 app.get('/photo/:id', async (req, res) => {

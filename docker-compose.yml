@@ -9,7 +9,7 @@ services:
       - '80:3002'
 
   redis:
-    image: redis
+    image: redis:5.0.5-alpine
     container_name: cache
     expose:
       - 6379
