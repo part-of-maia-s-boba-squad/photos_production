@@ -8,7 +8,7 @@ const db = require('../db/controller.js');
 
 const app = express();
 const port = 3002;
-const client = redis.createClient();
+const client = redis.createClient({ host: 'redis' });
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -36,13 +36,13 @@ const getPhotos = (req, res) => {
     res.status(200).send(rows);
     client.setex(id, 3600, JSON.stringify(rows));
   });
-}
+};
 
 app.get('/API/restaurant/photo/:id', getCache);
 
 app.get('/photo/:id', async (req, res) => {
   const { id } = req.params;
-  
+
   try {
     const { rows } = await db.getPhoto(id);
     res.status(200).send(rows);
@@ -64,7 +64,7 @@ app.post('/photo', async (req, res) => {
 
 app.patch('/photo/url', async (req, res) => {
   const { id, url } = req.query;
-  
+
   try {
     await db.updatePhotoURL(id, url);
     res.sendStatus(200);

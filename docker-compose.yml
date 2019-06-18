@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    depends_on:
+      - 'redis'
+    ports: 
+      - '80:3002'
+
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
